@@ -19,7 +19,7 @@
 // 
 // Related Topics 贪心算法 数组
   
-package cn.bestsort.leetcode.editor.cn;
+package java.cn;
 public class Id_55_JumpGame{
         public static void main(String[] args) {
             int[] test = {2,3,1,1,4};

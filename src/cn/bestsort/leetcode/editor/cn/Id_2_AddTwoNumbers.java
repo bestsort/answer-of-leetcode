@@ -12,7 +12,7 @@
 // 
 // Related Topics 链表 数学
   
-package cn.bestsort.leetcode.editor.cn;
+package java.cn;
 public class Id_2_AddTwoNumbers{
         public static void main(String[] args) {
             Solution solution = new Id_2_AddTwoNumbers()

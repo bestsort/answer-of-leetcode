@@ -43,7 +43,7 @@
 // 
 // Related Topics 数组 双指针
   
-package cn.bestsort.leetcode.editor.cn;
+package java.cn;
 public class Id_27_RemoveElement{
     public static void main(String[] args) {
         int[] nums = {0,1,2,2,3,0,4,2};

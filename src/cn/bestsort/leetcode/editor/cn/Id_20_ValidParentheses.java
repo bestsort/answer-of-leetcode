@@ -39,7 +39,7 @@
 //输出: true 
 // Related Topics 栈 字符串
   
-package cn.bestsort.leetcode.editor.cn;
+package java.cn;
 
 import java.util.HashMap;
 import java.util.Stack;

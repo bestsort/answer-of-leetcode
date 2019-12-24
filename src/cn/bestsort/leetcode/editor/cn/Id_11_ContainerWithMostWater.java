@@ -14,7 +14,7 @@
 //输出: 49 
 // Related Topics 数组 双指针
   
-package cn.bestsort.leetcode.editor.cn;
+package java.cn;
 public class Id_11_ContainerWithMostWater{
         public static void main(String[] args) {
             Solution solution = new Id_11_ContainerWithMostWater()

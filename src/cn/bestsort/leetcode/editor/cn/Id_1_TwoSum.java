@@ -11,9 +11,7 @@
 // 
 // Related Topics 数组 哈希表
   
-package cn.bestsort.leetcode.editor.cn;
-
-import java.util.HashMap;
+package java.cn;
 
 public class Id_1_TwoSum{
         public static void main(String[] args) {
