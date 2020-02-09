@@ -14,7 +14,7 @@
 // 
 // Related Topics 字符串 动态规划
   
-package java.cn;
+package cn.bestsort.leetcode.editor.cn;
 public class Id_5_LongestPalindromicSubstring{
         public static void main(String[] args) {
             Solution solution = new Id_5_LongestPalindromicSubstring()
