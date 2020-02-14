@@ -32,7 +32,8 @@ class Solution {
         for (int i = 0; i < s.length(); i++) {
             dp[i][i] = 1;
             for (int j = 0; j < i; j++) {
-                dp[j][i] = (s.charAt(i) == s.charAt(j) && (i-j<2 || 0 != dp[j+1][i-1]))? 1 : 0;
+                dp[j][i] = (s.charAt(i) == s.charAt(j)
+                        && (i-j<2 || 0 != dp[j+1][i-1]))? 1 : 0;
                 if (dp[j][i] != 0 && length < i - j + 1){
                     length = i - j + 1;
                     left = j;

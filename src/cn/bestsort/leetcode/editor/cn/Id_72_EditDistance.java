@@ -56,9 +56,6 @@ class Solution {
         for (int i = 0; i <= word1.length() ;i++) {
             dp[i][0] = i;
         }
-        String s;
-        StringBuffer stringBuffer;
-        StringBuilder stringBuilder;
         for (int i = 1; i <= word1.length(); i++) {
             for (int j = 1; j <= word2.length(); j++) {
                 if (word1.charAt(i-1) == word2.charAt(j-1)){

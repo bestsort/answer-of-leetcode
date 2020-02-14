@@ -11,16 +11,47 @@
 // Related Topics 数组
 package cn.bestsort.leetcode.editor.cn;
 
-public class Id_31_NextPermutation{
+  import java.util.Arrays;
+
+  public class Id_31_NextPermutation{
     public static void main(String[] args) {
-       Solution solution = new Id_31_NextPermutation().new Solution();
+        int[] nums = {1, 3, 2};
+
+        Solution solution = new Id_31_NextPermutation().new Solution();
+        solution.nextPermutation(nums);
+        for (int num : nums) {
+            System.out.print(num + " ");
+        }
     }
     
 
 //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public void nextPermutation(int[] nums) {
-        
+        if (nums.length <= 1){
+            return;
+        }
+        int l = 0, r = nums.length;
+        int index;
+        boolean swapped = false;
+        for (int i = nums.length - 2;!swapped && i >= 0 ; i--) {
+            if (nums[i] < nums[i + 1]){
+                index = i + 1;
+                for (int j = i + 1; j < nums.length; j++) {
+                    if (nums[j] > nums[i] && nums[j] <= nums[index]){
+                        index = j;
+                    }
+                }
+                if (index != -1){
+                    int buf = nums[index];
+                    nums[index] = nums[i];
+                    nums[i] = buf;
+                    l = i + 1;
+                    swapped = true;
+                }
+            }
+        }
+        Arrays.sort(nums, l, r);
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
