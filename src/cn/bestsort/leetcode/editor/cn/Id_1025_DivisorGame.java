@@ -45,11 +45,25 @@ public class Id_1025_DivisorGame{
         public static void main(String[] args) {
             Solution solution = new Id_1025_DivisorGame()
                               .new Solution();
+            System.out.println(solution.divisorGame(29));
         }
         //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public boolean divisorGame(int N) {
-        
+        boolean[] dp = new boolean[1001];
+        dp[1] = false;
+        dp[0] = true;
+        dp[2] = true;
+        for (int i = 2; i <= 1000; i++) {
+            boolean win = false;
+            for (int j = 1; j < i; j++) {
+                if (i % j == 0){
+                    win = !dp[i - j] || win;
+                }
+            }
+            dp[i] |= win;
+        }
+        return dp[N];
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
