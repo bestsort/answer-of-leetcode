@@ -22,17 +22,41 @@
   
 package cn.bestsort.leetcode.editor.cn;
 
-import java.util.Hashtable;
-
 public class Id_75_SortColors{
         public static void main(String[] args) {
             Solution solution = new Id_75_SortColors()
                               .new Solution();
+            int[] nums = {2,0,2,1,1,0};
+            solution.sortColors(nums);
+            for (int i = 0; i < nums.length; i++) {
+                System.out.print(nums[i]);
+            }
         }
         //leetcode submit region begin(Prohibit modification and deletion)
 class Solution {
     public void sortColors(int[] nums) {
-        
+        int leftIndex, rightIndex;
+        leftIndex = 0;
+        rightIndex = nums.length - 1;
+        int midIndex = 0;
+        while (midIndex <= rightIndex){
+            if (nums[midIndex] == 0){
+                swap(midIndex, leftIndex, nums);
+                leftIndex++;
+                midIndex++;
+            }else if(nums[midIndex] == 2){
+                swap(midIndex, rightIndex, nums);
+                rightIndex--;
+            }
+            else {
+                midIndex++;
+            }
+        }
+    }
+    void swap(int i, int j, int[] nums){
+        int buffer = nums[i];
+        nums[i] = nums[j];
+        nums[j] = buffer;
     }
 }
 //leetcode submit region end(Prohibit modification and deletion)
